@@ -21,8 +21,29 @@ public class MyString implements CharSequence,Comparable<CharSequence>{
         return data[i];
     }
     
+    public int length(){
+        
+        //returns length of CharSequence
+        return data.length;
+    }
     
+    public CharSequence subSequence(int start, int end){
     
+        if(start < 0 || end < 0 || start > length() || end > length()){
+            throw new IndexOutOfBoundsException;
+        }
+        
+        String cs = "";
+        
+        for(int i = start, i < end, i++){
+            
+            cs += charAt(i);
+            
+        }
+        
+        return cs;
+        
+        }
 
   }
 }
