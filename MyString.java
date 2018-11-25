@@ -44,6 +44,17 @@ public class MyString implements CharSequence,Comparable<CharSequence>{
         return cs;
         
         }
+        
+    public String toString(){
+        
+        String str = "";
+        
+        for(int i = 0, i < length(), i++){
+            
+            str += charAt(i);
+        }
+        return str;
+    }
 
   }
 }
