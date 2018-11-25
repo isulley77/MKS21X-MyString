@@ -29,12 +29,15 @@ public class MyString implements CharSequence,Comparable<CharSequence>{
     
     public CharSequence subSequence(int start, int end){
     
+        //checks that start and end are within range
         if(start < 0 || end < 0 || start > length() || end > length()){
             throw new IndexOutOfBoundsException;
         }
         
+        //String is-a CharSequence
         String cs = "";
         
+        //adds char to string
         for(int i = start, i < end, i++){
             
             cs += charAt(i);
@@ -49,6 +52,7 @@ public class MyString implements CharSequence,Comparable<CharSequence>{
         
         String str = "";
         
+        //adds char to string
         for(int i = 0, i < length(), i++){
             
             str += charAt(i);
