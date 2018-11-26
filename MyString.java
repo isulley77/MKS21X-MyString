@@ -10,7 +10,7 @@ public class MyString implements CharSequence,Comparable<CharSequence>{
         data = new char[s.length()];
         
         //adds chars from CharSequence to array
-        for(int i = 0, i < s.length(), i++){
+        for(int i = 0; i < s.length(); i++){
             data[i] = s.charAt(i);
         }
     }
@@ -18,7 +18,7 @@ public class MyString implements CharSequence,Comparable<CharSequence>{
     public char charAt(int index){
         
         //returns char
-        return data[i];
+        return data[index];
     }
     
     public int length(){
@@ -31,14 +31,14 @@ public class MyString implements CharSequence,Comparable<CharSequence>{
     
         //checks that start and end are within range
         if(start < 0 || end < 0 || start > length() || end > length()){
-            throw new IndexOutOfBoundsException;
+            throw new IndexOutOfBoundsException();
         }
         
         //String is-a CharSequence
         String cs = "";
         
         //adds char to string
-        for(int i = start, i < end, i++){
+        for(int i = start; i < end; i++){
             
             cs += charAt(i);
             
@@ -53,14 +53,16 @@ public class MyString implements CharSequence,Comparable<CharSequence>{
         String str = "";
         
         //adds char to string
-        for(int i = 0, i < length(), i++){
+        for(int i = 0; i < length(); i++){
             
             str += charAt(i);
         }
         return str;
     }
+    
+    public int compareTo(CharSequence seq){
+    
+        return 1;
+    }
 
   }
-}
-
-
