@@ -41,11 +41,8 @@ public class MyString implements CharSequence,Comparable<CharSequence>{
         for(int i = start; i < end; i++){
             
             cs += charAt(i);
-            
         }
-        
-        return cs;
-        
+            return cs;
         }
         
     public String toString(){
@@ -79,22 +76,14 @@ public class MyString implements CharSequence,Comparable<CharSequence>{
                 }
             }
         }
-        
         if(length() < o.length()){
-                
             return -1;
         }
-        
         else if(length() > o.length()){
-            
             return 1;
         }
-        
         else{
-         
             return 0;
         }
-                
     }
-
   }
