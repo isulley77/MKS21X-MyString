@@ -60,9 +60,41 @@ public class MyString implements CharSequence,Comparable<CharSequence>{
         return str;
     }
     
-    public int compareTo(CharSequence seq){
+    public int compareTo(CharSequence o){
     
-        return 1;
+        if(o == null){
+            throw new NullPointerException();
+        }
+        
+        for(int i = 0; i < o.length(); i++){
+            if(o.charAt(i) != charAt(i)){
+                if((charAt(i) - o.charAt(i)) < 0){
+                    return -1;
+                }
+                else if((charAt(i) - o.charAt(i)) > 0){
+                    return 1;
+                }
+                else{ 
+                    return 0;
+                }
+            }
+        }
+        
+        if(length() < o.length()){
+                
+            return -1;
+        }
+        
+        else if(length() > o.length()){
+            
+            return 1;
+        }
+        
+        else{
+         
+            return 0;
+        }
+                
     }
 
   }
